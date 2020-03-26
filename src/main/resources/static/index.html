@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<style>
+    header{
+        padding:5px;
+        background-color: red;
+        border-bottom: 2px;
+        border-bottom-color: darkred;
+        border-style: solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+    }
+    .fm{
+        color: red;
+    }
+    h1{
+        font-weight: bold;
+        font-family: Futura;
+        font-size: 320%;
+        color: #f2f5f0;
+        box-shadow: black;
+        margin: 1.5%;
+    }
+
+
+</style>
+<head>
+    <header>
+        <h1>Norsk Kino</h1>
+
+    </header>
+    <meta charset="UTF-8">
+    <title>Kunder</title>
+    <script src="script.js"></script>
+</head>
+<body onload="hentKunder()">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Kunde</h3>
+            <form class="form">
+                <div class="form-group">
+                    <label for="film">Film</label>
+                    <select id="film" type="text" class="form-control" id="film">
+                        <option value="Frozen 2">Frozen 2</option>
+                        <option value="Cars 4">Cars 4</option>
+                        <option value="Star Wars 9">Star wars 9</option>
+              
+
+                    </select>
+                    <label class="fm" id="filmfm"></label>
+
+                </div>
+                <div class="form-group">
+                    <label for="antall">Antall</label>
+                    <input type="number" class="form-control" id="antall"/>
+                    <label class="fm" id="antallfm"></label>
+                </div>
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn"/>
+                    <label class="fm" id="fornavnfm"></label>
+                </div>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn</label>
+                    <input type="text" class="form-control" id="etternavn"/>
+                    <label class="fm" id="etternavnfm"></label>
+                </div>
+                <div class="form-group">
+                    <label for="tlf">Telefonnummer</label>
+                    <input type="text" class="form-control" id="tlf"/>
+                    <label class="fm" id="tlffm"></label>
+                </div>
+                <div class="form-group">
+                    <label for="epost">Epost</label>
+                    <input type="text" class="form-control" id="epost"/>
+                    <label class="fm" id="epostfm"></label>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="kjopBillett()">Registrer</button><br/>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle kundene:</h3>
+            <div id="kundeListe"></div>
+            <button class="btn btn-danger" onclick="slettBilletter()">Slett alle kunder</button>
+        </div>
+    </div>
+</div>
+
+</body>
