@@ -26,6 +26,7 @@ public class HomeController {
     public void slettKunder(){
         kunder.clear();
     }
+    
 
 
     @GetMapping("/")
